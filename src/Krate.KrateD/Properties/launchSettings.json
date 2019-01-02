@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Krate.KrateD": {
+      "commandName": "Project",
+      "commandLineArgs": "-connect=172.31.252.187 -mine=1"
+    }
+  }
+}
