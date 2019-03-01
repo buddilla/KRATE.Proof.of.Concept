@@ -1,5 +1,10 @@
 ## How to Build Krate Proof-of-Concept
 1. Navigate into /src and open Stratis.Bitcoin.FullNode.sln with Visual Studio
+
+Note: For building in macOS NuGet will need to be installed and mono added to your file path. Copy and paste the following line in the Terminal app (found in /Applications/Utilities) and hit return.
+
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew install nuget && export MONO_GAC_PREFIX="/usr/local"
+
 2. Inside Visual Studio, in the Solution Explorer side window, right-click "Krate.KrateD" project and select "Set as StartUp Project"
 3. In the top menu bar, select Build > Rebuild Solution
 
