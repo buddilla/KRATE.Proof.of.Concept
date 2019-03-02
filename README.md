@@ -1,12 +1,47 @@
-## How to Build Krate Proof-of-Concept
+## How to Build Krate Proof-of-Concept (windows)
 1. Navigate into /src and open Stratis.Bitcoin.FullNode.sln with Visual Studio
-
-Note: For building in macOS NuGet will need to be installed and mono added to your file path. Copy and paste the following line in the Terminal app (found in /Applications/Utilities) and hit return.
-
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew install nuget && export MONO_GAC_PREFIX="/usr/local"
 
 2. Inside Visual Studio, in the Solution Explorer side window, right-click "Krate.KrateD" project and select "Set as StartUp Project"
 3. In the top menu bar, select Build > Rebuild Solution
+
+## How to Build Krate Proof-of-Concept (macOS)
+
+Prequisites:
+.Net Core 2.2 SDK (https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-2.2.104-macos-x64-installer)
+
+1. After installing .Net Core 2.2 SDK, open the Terminal application found in the directory /Applications/Utilities or press the command key and space bar at the same time and type terminal and click on the Terminal app.
+
+2. Navigate to your download of KRATE.Proof.of.Concept-master.zip and decompress by double clicking. If you have cloned via git you can ignore this step.
+
+3. In the terminal type "cd" (without quotes)
+
+4. Navigate to Krate.KrateD drag and drop the directory onto the terminal window and hit return
+	/src/Krate.KrateD 
+
+5. In the terminal copy and paste the following.
+	dotnet run
+
+Krate will compile and then begin to run. To run again if you quit the daemon use "dotnet run" (without quotes) in the same directory.
+
+Note:
+If you would like to run krate without the terminal running install screen using brew after quiting krate(control - c (without the minus sign)).
+	brew install screen
+
+If you do not have brew installed copy and paste the following into the terminal after quiting krate(control - c (without the minus sign))
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew install screen
+
+To start krate using screen.
+
+1. Open the terminal if not open already and type "screen" (without quotes) and hit return twice
+
+2. Navigate to Krate.KrateD
+
+3. Enter "dotnet run" (without quotes) and hit return
+
+4. press control - d (without the minus sign)
+
+You can see the api by opening a browser window and navigating to
+	http://localhost:37220/swagger/index.html
 
 ## How to Run Krate
 1. Go into the folder that contains "Krate.KrateD.dll" file.
